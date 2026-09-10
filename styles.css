@@ -1,0 +1,437 @@
+/* ============================================
+   ESTILOS BASE - FASE 4 (PRIMERA IMPLEMENTACIÓN)
+   Mobile-first. Placeholders visuales para imágenes.
+============================================= */
+
+/* ---- Variables de diseño ---- */
+:root {
+  --azul-principal: #1565C0;
+  --azul-secundario: #64B5F6;
+  --azul-hielo: #EAF3FC;
+  --blanco: #FFFFFF;
+  --texto-principal: #2B2B2B;
+  --texto-secundario: #5A5A5A;
+  --borde: #E0E0E0;
+
+  --radio: 10px;
+  --sombra-suave: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --espaciado-seccion: 48px;
+}
+
+/* ---- Reset / Base ---- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--texto-principal);
+  background-color: var(--blanco);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+section {
+  padding: var(--espaciado-seccion) 20px;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  color: var(--azul-principal);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* ---- Botones ---- */
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: var(--radio);
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+  max-width: 320px;
+}
+
+.btn-primary {
+  background-color: var(--azul-principal);
+  color: var(--blanco);
+}
+
+.btn-whatsapp {
+  background-color: var(--azul-principal);
+  color: var(--blanco);
+  margin-top: 20px;
+}
+
+/* ---- Header / Navegación ---- */
+.site-header {
+  background-color: var(--blanco);
+  border-bottom: 1px solid var(--borde);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  position: relative;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px dashed var(--azul-secundario);
+  border-radius: var(--radio);
+  font-size: 0.65rem;
+  color: var(--azul-principal);
+  background-color: var(--azul-hielo);
+}
+
+.brand-name {
+  font-weight: 700;
+  color: var(--azul-principal);
+  font-size: 1rem;
+}
+
+.nav-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--azul-principal);
+  border-radius: 2px;
+}
+
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--blanco);
+  border-bottom: 1px solid var(--borde);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+
+.main-nav.abierto {
+  max-height: 320px;
+}
+
+.main-nav a {
+  padding: 14px 20px;
+  border-top: 1px solid var(--borde);
+  font-weight: 500;
+}
+
+/* ---- Hero / Inicio ---- */
+.hero {
+  padding-top: 32px;
+  text-align: center;
+}
+
+.hero-image-placeholder {
+  background-color: var(--azul-hielo);
+  border: 1px dashed var(--azul-secundario);
+  border-radius: var(--radio);
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--azul-principal);
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.hero-content h1 {
+  font-size: 1.75rem;
+  color: var(--texto-principal);
+  margin-bottom: 12px;
+}
+
+.hero-subtitle {
+  color: var(--texto-secundario);
+  margin-bottom: 24px;
+  font-size: 1rem;
+}
+
+.hero-content .btn {
+  margin: 0 auto;
+}
+
+/* ---- Sección: Servicios ---- */
+.servicios {
+  background-color: var(--blanco);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--blanco);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra-suave);
+  padding: 18px;
+}
+
+.card-image-placeholder {
+  background-color: var(--azul-hielo);
+  border: 1px dashed var(--azul-secundario);
+  border-radius: var(--radio);
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--azul-principal);
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  color: var(--texto-principal);
+}
+
+.card p {
+  color: var(--texto-secundario);
+  font-size: 0.9rem;
+}
+
+/* ---- Sección: Atención especializada ---- */
+.atencion {
+  background-color: var(--azul-hielo);
+}
+
+.atencion-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.atencion-bloque {
+  background-color: var(--blanco);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra-suave);
+  padding: 20px;
+}
+
+.atencion-image-placeholder {
+  background-color: var(--azul-hielo);
+  border: 1px dashed var(--azul-secundario);
+  border-radius: var(--radio);
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--azul-principal);
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+}
+
+.atencion-bloque h3 {
+  color: var(--azul-principal);
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.atencion-bloque p {
+  color: var(--texto-secundario);
+}
+
+/* ---- Sección: Beneficios ---- */
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  text-align: center;
+}
+
+.beneficio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.beneficio-icon-placeholder {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--azul-hielo);
+  border: 1px solid var(--azul-secundario);
+}
+
+.beneficio p {
+  color: var(--texto-principal);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* ---- Sección: Contacto ---- */
+.contacto {
+  text-align: center;
+  background-color: var(--blanco);
+}
+
+.contacto-info {
+  margin-bottom: 8px;
+}
+
+.contacto-telefono {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--azul-principal);
+  margin-bottom: 6px;
+}
+
+.contacto-direccion {
+  color: var(--texto-secundario);
+  margin-bottom: 20px;
+}
+
+.contacto .btn-whatsapp {
+  margin: 0 auto;
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  background-color: var(--azul-principal);
+  color: var(--blanco);
+  text-align: center;
+  padding: 32px 20px;
+}
+
+.footer-brand {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.site-footer p {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  opacity: 0.95;
+}
+
+.footer-copyright {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* ---- Responsive: Tablet y Escritorio ---- */
+@media (min-width: 640px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .atencion-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .beneficios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .main-nav {
+    position: static;
+    flex-direction: row;
+    max-height: none;
+    overflow: visible;
+    border-bottom: none;
+    background-color: transparent;
+  }
+
+  .main-nav a {
+    border-top: none;
+    padding: 8px 14px;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .beneficios-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    text-align: left;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .hero-image-placeholder {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  .hero-content {
+    flex: 1;
+  }
+
+  .hero-content .btn {
+    margin: 0;
+  }
+
+  section {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+}
