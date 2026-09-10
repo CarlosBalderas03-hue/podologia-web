@@ -268,6 +268,53 @@ section h2 {
   color: var(--texto-secundario);
 }
 
+/* ---- Sección: Horario de atención ---- */
+.horario {
+  background-color: var(--blanco);
+  text-align: center;
+}
+
+.horario-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.horario-bloque {
+  background-color: var(--azul-hielo);
+  border-radius: var(--radio);
+  padding: 16px;
+}
+
+.horario-bloque h3 {
+  color: var(--azul-principal);
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.horario-bloque p {
+  color: var(--texto-principal);
+  font-size: 0.95rem;
+}
+
+/* ---- Sección: Servicio a domicilio ---- */
+.domicilio {
+  background-color: var(--azul-hielo);
+  text-align: center;
+}
+
+.domicilio p {
+  color: var(--texto-secundario);
+  max-width: 500px;
+  margin: 0 auto 20px;
+}
+
+.domicilio .btn-whatsapp {
+  margin: 0 auto;
+}
+
 /* ---- Sección: Beneficios ---- */
 .beneficios-grid {
   display: grid;
@@ -283,12 +330,16 @@ section h2 {
   gap: 10px;
 }
 
-.beneficio-icon-placeholder {
+.beneficio-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: var(--azul-hielo);
   border: 1px solid var(--azul-secundario);
+  color: var(--azul-principal);
 }
 
 .beneficio p {
@@ -312,10 +363,25 @@ section h2 {
   font-weight: 700;
   color: var(--azul-principal);
   margin-bottom: 6px;
+  display: block;
+}
+
+.contacto-telefono a {
+  display: inline-block;
+  padding: 7px 8px;
+  margin: -7px -8px;
 }
 
 .contacto-direccion {
   color: var(--texto-secundario);
+  margin-bottom: 16px;
+}
+
+.como-llegar {
+  display: inline-block;
+  color: var(--azul-principal);
+  font-weight: 600;
+  padding: 10px 4px;
   margin-bottom: 20px;
 }
 
@@ -342,6 +408,12 @@ section h2 {
   opacity: 0.95;
 }
 
+.site-footer p a {
+  display: inline-block;
+  padding: 11px 8px;
+  margin: -11px -8px;
+}
+
 .footer-copyright {
   margin-top: 12px;
   font-size: 0.8rem;
@@ -360,6 +432,11 @@ section h2 {
 
   .beneficios-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .horario-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: none;
   }
 }
 
@@ -388,6 +465,10 @@ section h2 {
 
   .beneficios-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .horario-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .hero {
