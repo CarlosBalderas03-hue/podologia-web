@@ -1,6 +1,6 @@
 /* ============================================
-   ESTILOS BASE - FASE 4 (PRIMERA IMPLEMENTACIÓN)
-   Mobile-first. Placeholders visuales para imágenes.
+   ESTILOS BASE - Mobile-first.
+   Imágenes oficiales integradas (assets reales en /img/).
 ============================================= */
 
 /* ---- Variables de diseño ---- */
@@ -104,17 +104,11 @@ section h2 {
   gap: 10px;
 }
 
-.logo-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.logo {
   width: 40px;
   height: 40px;
-  border: 1px dashed var(--azul-secundario);
-  border-radius: var(--radio);
-  font-size: 0.65rem;
-  color: var(--azul-principal);
-  background-color: var(--azul-hielo);
+  object-fit: contain;
+  border-radius: 50%;
 }
 
 .brand-name {
@@ -173,17 +167,13 @@ section h2 {
   text-align: center;
 }
 
-.hero-image-placeholder {
-  background-color: var(--azul-hielo);
-  border: 1px dashed var(--azul-secundario);
-  border-radius: var(--radio);
+.hero-image {
+  width: 100%;
   height: 220px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--azul-principal);
-  font-size: 0.9rem;
+  object-fit: cover;
+  border-radius: var(--radio);
   margin-bottom: 24px;
+  display: block;
 }
 
 .hero-content h1 {
@@ -221,17 +211,13 @@ section h2 {
   padding: 18px;
 }
 
-.card-image-placeholder {
-  background-color: var(--azul-hielo);
-  border: 1px dashed var(--azul-secundario);
-  border-radius: var(--radio);
+.card-image {
+  width: 100%;
   height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--azul-principal);
-  font-size: 0.85rem;
+  object-fit: cover;
+  border-radius: var(--radio);
   margin-bottom: 14px;
+  display: block;
 }
 
 .card h3 {
@@ -263,17 +249,13 @@ section h2 {
   padding: 20px;
 }
 
-.atencion-image-placeholder {
-  background-color: var(--azul-hielo);
-  border: 1px dashed var(--azul-secundario);
-  border-radius: var(--radio);
+.atencion-image {
+  width: 100%;
   height: 160px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--azul-principal);
-  font-size: 0.85rem;
+  object-fit: cover;
+  border-radius: var(--radio);
   margin-bottom: 14px;
+  display: block;
 }
 
 .atencion-bloque h3 {
@@ -417,8 +399,10 @@ section h2 {
     margin: 0 auto;
   }
 
-  .hero-image-placeholder {
+  .hero-image {
     flex: 1;
+    width: 100%;
+    height: 320px;
     margin-bottom: 0;
   }
 
